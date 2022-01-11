@@ -63,4 +63,7 @@ app.use(bodyParser.urlencoded({
    // res.sendFile(__dirname+"\\public\\index.html");
  })
 
- app.listen(3000,async()=>console.log("Server is running"))
+ let port = process.env.PORT;
+ if (port == null || port == "") {
+   port = 3000;
+ }
