@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({
         console.log(response.statusCode);
         response.on("data",function(data){
            data1=JSON.parse(data);
-            res.render(__dirname+"\\public\\list.ejs",{data1:data1.data,page:data1.meta.pagination.page});
+            res.render(__dirname+"/public/list.ejs",{data1:data1.data,page:data1.meta.pagination.page});
         });
     })
  });
