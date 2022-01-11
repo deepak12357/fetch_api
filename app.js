@@ -67,3 +67,7 @@ app.use(bodyParser.urlencoded({
  if (port == null || port == "") {
    port = 3000;
  }
+
+ app.listen(port,function(req,res){
+console.log("server is running");
+ });
